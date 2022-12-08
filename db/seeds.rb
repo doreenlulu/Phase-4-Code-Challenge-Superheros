@@ -16,7 +16,7 @@ puts " ⚡ creating powers...."
 
 powers.each {|power| Power.create(power)}
 
-heroes = [
+heros = [
   {name:"Kamala Khan", super_name:"Ms. Marvel"},
   {name:"Doreen Green", super_name:"Squirrel Girl"},
   {name:"Gwen Stacy", super_name:"Spider_Gwen"},
@@ -25,7 +25,7 @@ heroes = [
 
 puts "🦸 creating heroes...."
 
-heroes.each { |hero| Hero.create(hero) }
+heros.each { |hero| Hero.create(hero) }
 
 HeroPower.create(strength: "Average", hero_id: 1 , power_id: 1)
 
