@@ -3,8 +3,10 @@ class HeroPowersController < ApplicationController
 
     def create
         hero_power = HeroPower.create!(hero_power_params)
-        hero = Hero.find(hero_power.heroe_id)
-        render json: hero, serializer: EachHeroPowerSerializer, status: :created
+        render json: hero_power
+        # hero_power = HeroPower.create!(hero_power_params)
+        # hero = Hero.find(hero_power.hero_id)
+        # render json: hero, serializer: EachHeroPowerSerializer, status: :created
     end
 
     private
